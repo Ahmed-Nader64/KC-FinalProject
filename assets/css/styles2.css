@@ -1,0 +1,451 @@
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Oswald:wght@500;600;700&family=Raleway:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,900&family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,700;1,900&display=swap");
+@import url(//db.onlinewebfonts.com/c/d7e8a95865396cddca89b00080d2cba6?family=SoDo+Sans+SemiBold);
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,600;1,900&display=swap');
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: white;
+}
+
+body, html{
+    scroll-behavior: smooth;
+}
+
+
+header {
+    height: 30px;
+    font-family: "SoDo Sans SemiBold";
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 25px;
+    padding-left: 50px;
+    background-color: white;
+    border: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    box-sizing:unset;
+    line-height: normal;
+}
+
+header p {
+    color:#0f9d58;
+    font-size: 23px;
+    /* font-family: "SoDo Sans SemiBold"; */
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+}
+
+header p span {
+    color: black;
+}
+
+img {
+    padding: 8px;
+    cursor: pointer;
+}
+
+nav {
+    /* padding-left: 50px; */
+    width: 800px;
+}
+
+nav ul {
+    width: 750px;
+    margin-left: 100px;
+}
+
+nav li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.87);
+    font-size: 15px;
+    font-weight: 700;
+    padding: 10px;
+    text-align: center;
+    transition: all 0.2s ease-in-out;
+    border-radius: 2rem;
+}
+
+nav li a:hover {
+    background-color: #0f9d58;
+    text-align: center;
+    margin: auto;
+    color: white;
+    padding-top: 11px;
+}
+
+.header_btn {
+    display: inline-block;
+    background: none;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #0f9d58;
+    border-radius: 50px;
+    padding: 7px 16px;
+    font-weight: 700;
+    line-height: 1.2;
+    text-align: center;
+    font-size: 15px;
+    transition: all 0.2s ease-in-out;
+    width: 100px;
+    height: 45px;
+    margin-left: 50px;
+    color: #0f9d58;
+    font-family: "SoDo Sans SemiBold";
+}
+
+.btn1 {
+    display:flex ;
+    margin-left: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: right;
+    box-sizing: unset;
+}
+
+.header_btn:hover {
+    background-color: #0f9d58;
+    color: white;
+}
+
+.cart_btn{
+    width: 2.7rem;
+    height: 2.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    color: #0f9d58;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+.cart_btn:hover{
+    background-color: #0f9d58;
+    color: white;
+    border-radius: 0.5rem;
+}
+.cart{
+    position: fixed;
+    top: 0;
+    right: 0;
+    right: -100%;
+    width: 360px;
+    height: 100vh;
+    border-radius: 5px 0px 0px 0px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 20px;
+    font-family: 'Poppins', sans-serif;
+    background-color: whitesmoke;
+    box-shadow: -2px solid 4px hsl(0 4% 15% / 10%);
+    transition: 1,5s;
+}
+
+.cart.active{
+    right: 0;
+    transition: 0.5s;
+}
+
+.cart-title{
+    text-align:center ;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 2rem;
+}
+
+.cart-box{
+    display: grid;
+    grid-template-columns: 32% 50% 18%;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.cart-img{
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.detail-box{
+    display: grid;
+    row-gap: 0.5rem;
+}
+
+.cart-product-title{
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+.cart-cal{
+    font-weight: 500;
+}
+
+.cart-quantity{
+    width: 2.4rem;
+    text-align: center;
+    font-size: 1rem;
+    border: 1px solid black;
+    outline: black;
+}
+
+.cart-remove{
+    font-size: 24px;
+    color:#25335b ;
+    cursor: pointer;
+}
+
+.total{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1.5rem;
+    border-top: 1px solid #0f9d58;
+}
+
+.total-title{
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.total-cal{
+    margin-left: 0.5rem;
+}
+
+.btn-cal{
+    display: flex;
+    margin: 1.5rem auto 0 auto;
+    padding: 12px 20px;
+    border: none;
+    color: #ffffff;
+    background-color: #0f9d58;
+    box-shadow: 1px 1px 25px #0f9d5820;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-cal:hover{
+    color: #0f9d58;
+    background-color: white;
+    box-shadow: 1px 1px 25px #ffffff87;
+    border-width: 1.5px;
+    border-color: #0f9d58;
+    border-style: solid;
+}
+
+#cart-close{
+    position: absolute;
+    top: 1rem;
+    right: 0.8rem;
+    font-size: 2rem;
+    color: #25335b;
+    cursor: pointer;
+}
+
+header #toggle{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    margin-left: 50px;
+    z-index: -1;
+}
+
+header #toggle:before{
+    content: "";
+    position: absolute;
+    top: 7px;
+    width: 100%;
+    height: 2px;
+    background-color: #0f9d58;
+}
+
+header #toggle::after{
+    content: "";
+    position: absolute;
+    bottom: 7px;
+    width: 100%;
+    height: 2px;
+    background-color: #0f9d58;
+}
+
+.banner.active header #toggle::before{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%)rotate(45deg);
+}
+
+.banner.active header #toggle::after{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%)rotate(-45deg);
+}
+
+.banner{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    transition: all 0.5s ease-in-out;
+    z-index: 2;
+}
+.banner.active{
+    transform: translateX(-400px);
+}
+
+#navigation{
+    position: fixed;
+    top: 0;
+    right: -400px;
+    width: 400px;
+    height: 100vh;
+    background-color: #0f9d58;
+    z-index: 60;
+    display: grid;
+    place-items: center;
+    transition: 0.5s;
+}
+
+#navigation.active{
+    right: 0;
+}
+
+#navigation ul{
+    font-family: "Josefin Sans", sans-serif;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+#navigation ul li{
+    list-style: none;
+    padding: 25px;
+    transition: all .5s;
+}
+
+#navigation ul li a{
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.75em;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: all .5s;
+}
+
+#navigation ul li a:hover{
+    color: rgb(38, 255, 0);
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.200);
+    margin-left: -18px;
+}
+
+
+.CalculateForm{
+    /* padding: 50px; */
+    width: 100%;
+    
+}
+
+.title{
+    color: rgb(253, 174, 28);
+    text-shadow: 1px 1px 10px rgba(253, 174, 28, 0.504);
+    font-size: 35px;
+    padding: 30px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.501);
+    text-align: center;
+}
+
+.box{
+    margin-top: -50px;
+    padding: 100px;
+}
+
+.form-control, .form-select, .card, .btn{
+        border-radius: 15px;
+        /* width: 100%;
+        height: 100%; */
+        padding-bottom: 25px;
+        padding: -500px;
+    }
+
+.result{
+    background-color: #ffb007;
+    padding: 10px;
+    box-shadow: 1px 1px 25px #ffb0077e;
+    border-radius: 20px;
+    color: #212529;
+}
+
+    .form-control, .form-select{
+        background: none;
+        color: #fff;
+    }
+
+    .form-select{
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23ffffff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e") !important;
+        background-repeat: no-repeat !important;
+        background-position: right 0.75rem center !important;
+        background-size: 16px 12px !important;
+    }
+
+    input[type=checkbox], input[type=radio]
+    {
+        width: 23px;
+        height: 23px;
+        display: inline-block;
+        top: 0;
+        position: relative;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        border: 1px solid #ffffff;
+        overflow: hidden;
+    }
+
+    input[type=checkbox]
+    {
+        border-radius: 3px;
+    }
+
+    input[type=radio]
+    {
+        border-radius: 100%;
+    }
+
+    input[type=checkbox]:checked, input[type=radio]:checked
+    {
+        border: none;
+    }
+
+    input[type=checkbox]:checked:after, input[type=radio]:checked:after
+    {
+        content: "\f00c";
+        font-family: "Font Awesome 5 Pro";
+        font-weight: 900;
+        left: 0;
+        position:absolute;
+        top:0;
+        font-size: 15px;
+        color: #000;
+        background: #ffffff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+    }
